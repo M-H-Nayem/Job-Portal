@@ -24,6 +24,7 @@ export default function JobsPage() {
 
     fetchJobs();
   }, []);
+  console.log(jobs);
 
   if (loading)
     return <div className="text-center py-20 min-h-screen">Loading...</div>;

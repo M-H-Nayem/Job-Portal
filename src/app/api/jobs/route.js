@@ -10,10 +10,15 @@ export async function GET(req) {
 
     const { searchParams } = new URL(req.url);
     const email = searchParams.get("email");
+      const employerEmail = searchParams.get("employerEmail");
 
     let query = {};
+    
     if (email) {
       query = { employerEmail: email }; 
+    }
+     if (employerEmail) {
+      query = { employerEmail: employerEmail }; // Filter by the employer's email
     }
 
     const jobs = await db.collection("jobs").find(query).toArray();

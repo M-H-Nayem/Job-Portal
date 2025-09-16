@@ -1,6 +1,6 @@
-
 import ProtectedRoute from "@/Components/Private/ProtectedRoute";
 import React from "react";
+import Apply from "./button/Apply";
 
 export default async function JobDetailPage({ params }) {
   const { id } =await params;
@@ -88,9 +88,7 @@ console.log("job ",job);
 
           {/* Apply Button */}
           <div className="text-center mt-8">
-            <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition">
-              Apply Now
-            </button>
+           <Apply job={job}></Apply>
           </div>
         </div>
       </div>

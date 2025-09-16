@@ -103,8 +103,8 @@ export default function MyJobsPage() {
   }
 
   return (
-    <div className="container mx-auto px-6 py-10">
-      <h1 className="text-3xl font-bold mb-6">My Posted Jobs</h1>
+    <div className="container mx-auto py-3">
+      <h1 className="text-3xl font-bold mb-6 text-center">My Posted Jobs</h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {jobs.map((job) => (
@@ -117,7 +117,7 @@ export default function MyJobsPage() {
             <p className="text-gray-500 mb-2">Location- {job.location}</p>
             <p className="text-gray-700 mb-2">Type- {job.time}</p>
             <p className="text-gray-700 mb-2">
-              💰Salury- {job.salaryMin} - {job.salaryMax} BDT
+             Salury- {job.salaryMin} - {job.salaryMax} BDT
             </p>
             <p className="text-gray-500 text-sm mb-4">
               Deadline: {new Date(job.deadline).toLocaleDateString()}
@@ -129,7 +129,7 @@ export default function MyJobsPage() {
             <div className="flex gap-3">
               <button
                 onClick={() => handleUpdate(job)}
-                className="flex-1 bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition"
+                className="flex-1 bg-yellow-500 text-white py-1 rounded-lg hover:bg-yellow-600 transition "
               >
                 Update
               </button>

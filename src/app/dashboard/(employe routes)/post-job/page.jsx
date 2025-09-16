@@ -72,8 +72,9 @@ export default function AddJobForm() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-6 mt-8">
-      <h2 className="text-2xl font-bold mb-6 text-center">Post a New Job</h2>
+    <>
+      <h2 className="text-3xl font-bold mb-6 text-center">Post a New Job</h2>
+    <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-3 mt-8">
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Title */}
         <div>
@@ -250,5 +251,7 @@ export default function AddJobForm() {
         </button>
       </form>
     </div>
+    
+    </>
   );
 }

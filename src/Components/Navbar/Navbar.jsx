@@ -72,7 +72,7 @@ navLinks = [
                 onClick={() => signOut({ callbackUrl: "/" })}
                 className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
               >
-                Logout
+                LogOut
               </button>
             </>
           )}
@@ -88,13 +88,13 @@ navLinks = [
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg border-t">
+        <div className="md:hidden bg-white shadow-lg border-t z-50">
           <div className="flex flex-col space-y-4 px-6 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition"
+                className="text-gray-700 hover:text-blue-600 font-medium transition text-center"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -105,14 +105,14 @@ navLinks = [
               <>
                 <Link
                   href="/login"
-                  className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition"
+                  className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Login
                 </Link>
                 <Link
                   href="/register"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Sign Up
@@ -120,11 +120,11 @@ navLinks = [
               </>
             ) : (
               <>
-                {session.user.name && (
+                {/* {session.user.name && (
                   <span className="text-gray-700 font-medium">
                     Hello, {session.user.name}
                   </span>
-                )}
+                )} */}
                 <button
                   onClick={() => {
                     signOut({ callbackUrl: "/" });
@@ -132,7 +132,7 @@ navLinks = [
                   }}
                   className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
                 >
-                  Logout
+                  LogOut
                 </button>
               </>
             )}
