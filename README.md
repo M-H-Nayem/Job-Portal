@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Job-Portal-Pro
 
-## Getting Started
+Job-Portal-Pro is a full-stack job board application built with Next.js, a modern React framework. It connects job seekers with employers, providing features for job posting, application management, and user profiles.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Secure login/registration with NextAuth.js.
+- **Role-Based Access Control**: Different dashboards for job seekers, employers, and an admin.
+- **Job Management**: Employers can post, edit, and delete job listings.
+- **Application System**: Job seekers can apply for jobs, and employers can manage applications (accept/reject).
+- **Saved Jobs**: Job seekers can save job listings to their profile.
+- **Admin Dashboard**: Admins have full control to manage user roles and oversee the platform.
+- **Responsive Design**: Built with Tailwind CSS for a seamless experience on all devices.
+- **Interactive UI**: SweetAlert2 for beautiful, dynamic alerts and notifications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js 14, React, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: MongoDB
+- **Authentication**: NextAuth.js
+- **State Management**: React's built-in hooks (`useState`, `useEffect`)
+- **UI Components**: React Icons, SweetAlert2
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+Follow these steps to set up the project locally.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v18 or higher)
+- npm or yarn
+- MongoDB Atlas account (or a local MongoDB instance)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/Job-Portal-Pro.git](https://github.com/your-username/Job-Portal-Pro.git)
+    cd Job-Portal-Pro
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Set up environment variables:**
+    Create a `.env.local` file in the root directory and add the following variables.
+
+    ```env
+    # MongoDB Connection URI
+    MONGODB_URI=your_mongodb_connection_string
+
+    # NextAuth.js Configuration
+    NEXTAUTH_SECRET=a_long_random_string_for_nextauth_secret
+    NEXTAUTH_URL=http://localhost:3000
+
+    # Google Provider (Optional)
+    GOOGLE_CLIENT_ID=your_google_client_id
+    GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+    # GitHub Provider (Optional)
+    GITHUB_ID=your_github_client_id
+    GITHUB_SECRET=your_github_client_secret
+
+    # Base URL for API calls
+    NEXT_PUBLIC_BASE_URL=http://localhost:3000
+    ```
+
+    - Replace `your_mongodb_connection_string` with your MongoDB URI.
+    - Generate a secure string for `NEXTAUTH_SECRET`. You can use an online tool or a command like `openssl rand -base64 32`.
+    - You can add other providers like Google or GitHub by getting the credentials from their developer consoles.
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+5.  **Open the application:**
+    Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 📄 Project Structure
