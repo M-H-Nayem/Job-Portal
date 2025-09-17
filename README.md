@@ -1,6 +1,6 @@
-# Job-Portal-Pro
+# Job-Portal
 
-Job-Portal-Pro is a full-stack job board application built with Next.js, a modern React framework. It connects job seekers with employers, providing features for job posting, application management, and user profiles.
+Job-Portal is a full-stack job board application built with Next.js, a modern React framework. It connects job seekers with employers, providing features for job posting, application management, and user profiles.
 
 ## ✨ Features
 
