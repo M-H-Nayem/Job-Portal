@@ -82,6 +82,6 @@ Follow these steps to set up the project locally.
     ```
 
 5.  **Open the application:**
-    Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+    Open [https://job-portal-website-cyan.vercel.app/](https://job-portal-website-cyan.vercel.app/) in your browser to see the result.
 
 ## 📄 Project Structure
